@@ -1,38 +1,56 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 300;
   margin: 0;
   padding: 0;
-  background: #fafafa;
-  color: #333;
+  background: #fff;
+  color: #000;
 }
 header {
-  background: #eee;
-  padding: 10px;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
 }
-header nav a {
-  margin: 0 15px;
+header .name {
+  font-size: 20px;
+  font-weight: 400;
+}
+header .contact {
+  font-size: 14px;
+  margin-top: 5px;
+}
+header .contact a {
+  color: #000;
   text-decoration: none;
-  color: #333;
-  font-weight: bold;
+}
+header .center a {
+  font-size: 18px;
+  text-decoration: none;
+  color: #000;
 }
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-  padding: 20px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(6, 15vh);
+  gap: 10px;
+  height: 90vh;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
 }
 .gallery img {
   width: 100%;
-  border-radius: 8px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+  transition: transform 0.3s ease;
 }
 .gallery img:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
 }
 .about {
-  padding: 20px;
+  padding: 40px;
   text-align: center;
 }
 .about img {
