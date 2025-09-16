@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Evgenia Sakharova</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <div class="contacts">
-      <p>Evgenia Sakharova<br>
+      Evgenia Sakharova<br>
       +354 8314060<br>
-      <a href="mailto:blomlist@gmail.com">blomlist@gmail.com</a></p>
+      <a href="mailto:blomlist@gmail.com">blomlist@gmail.com</a>
     </div>
     <nav>
       <a href="index.html">Home</a>
@@ -20,27 +20,29 @@
     </nav>
   </header>
 
+  <!-- Статичная композиция из 20 работ -->
   <main class="gallery">
-    <img src="images/img1.jpg" class="img img1">
-    <img src="images/img2.jpg" class="img img2">
-    <img src="images/img3.jpg" class="img img3">
-    <img src="images/img4.jpg" class="img img4">
-    <img src="images/img5.jpg" class="img img5">
-    <img src="images/img6.jpg" class="img img6">
-    <img src="images/img7.jpg" class="img img7">
-    <img src="images/img8.jpg" class="img img8">
-    <img src="images/img9.jpg" class="img img9">
-    <img src="images/img10.jpg" class="img img10">
-    <img src="images/img11.jpg" class="img img11">
-    <img src="images/img12.jpg" class="img img12">
-    <img src="images/img13.jpg" class="img img13">
-    <img src="images/img14.jpg" class="img img14">
-    <img src="images/img15.jpg" class="img img15">
-    <img src="images/img16.jpg" class="img img16">
-    <img src="images/img17.jpg" class="img img17">
-    <img src="images/img18.jpg" class="img img18">
-    <img src="images/img19.jpg" class="img img19">
-    <img src="images/img20.jpg" class="img img20">
+    <!-- каждый img пробует .jpg и, если не найден, падает на .png -->
+    <img class="img img1"  src="images/gallery1.jpg"  onerror="this.onerror=null;this.src='images/gallery1.png'"  alt="">
+    <img class="img img2"  src="images/gallery2.jpg"  onerror="this.onerror=null;this.src='images/gallery2.png'"  alt="">
+    <img class="img img3"  src="images/gallery3.jpg"  onerror="this.onerror=null;this.src='images/gallery3.png'"  alt="">
+    <img class="img img4"  src="images/gallery4.jpg"  onerror="this.onerror=null;this.src='images/gallery4.png'"  alt="">
+    <img class="img img5"  src="images/gallery5.jpg"  onerror="this.onerror=null;this.src='images/gallery5.png'"  alt="">
+    <img class="img img6"  src="images/gallery6.jpg"  onerror="this.onerror=null;this.src='images/gallery6.png'"  alt="">
+    <img class="img img7"  src="images/gallery7.jpg"  onerror="this.onerror=null;this.src='images/gallery7.png'"  alt="">
+    <img class="img img8"  src="images/gallery8.jpg"  onerror="this.onerror=null;this.src='images/gallery8.png'"  alt="">
+    <img class="img img9"  src="images/gallery9.jpg"  onerror="this.onerror=null;this.src='images/gallery9.png'"  alt="">
+    <img class="img img10" src="images/gallery10.jpg" onerror="this.onerror=null;this.src='images/gallery10.png'" alt="">
+    <img class="img img11" src="images/gallery11.jpg" onerror="this.onerror=null;this.src='images/gallery11.png'" alt="">
+    <img class="img img12" src="images/gallery12.jpg" onerror="this.onerror=null;this.src='images/gallery12.png'" alt="">
+    <img class="img img13" src="images/gallery13.jpg" onerror="this.onerror=null;this.src='images/gallery13.png'" alt="">
+    <img class="img img14" src="images/gallery14.jpg" onerror="this.onerror=null;this.src='images/gallery14.png'" alt="">
+    <img class="img img15" src="images/gallery15.jpg" onerror="this.onerror=null;this.src='images/gallery15.png'" alt="">
+    <img class="img img16" src="images/gallery16.jpg" onerror="this.onerror=null;this.src='images/gallery16.png'" alt="">
+    <img class="img img17" src="images/gallery17.jpg" onerror="this.onerror=null;this.src='images/gallery17.png'" alt="">
+    <img class="img img18" src="images/gallery18.jpg" onerror="this.onerror=null;this.src='images/gallery18.png'" alt="">
+    <img class="img img19" src="images/gallery19.jpg" onerror="this.onerror=null;this.src='images/gallery19.png'" alt="">
+    <img class="img img20" src="images/gallery20.jpg" onerror="this.onerror=null;this.src='images/gallery20.png'" alt="">
   </main>
 </body>
 </html>
