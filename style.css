@@ -1,10 +1,14 @@
+/* базовое */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
 body {
   margin: 0;
-  font-family: 'Playfair Display', serif;
   background: #fff;
   color: #000;
+  font-family: 'Playfair Display', serif;
 }
 
+/* хедер */
 header {
   display: flex;
   justify-content: space-between;
@@ -12,74 +16,53 @@ header {
   padding: 20px;
   font-size: 14px;
 }
+.contacts { line-height: 1.4; }
+a, a:visited { color: #000; text-decoration: none; }
+a:hover, a:active { color: #000; text-decoration: underline; }
 
-.contacts {
-  line-height: 1.4;
-}
-
-header nav a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #000;
-}
-
-header nav a:hover,
-header nav a:active {
-  text-decoration: underline;
-  color: #000;
-}
-
-/* Галерея */
+/* главная — статичная композиция */
 .gallery {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100vh;        /* всё в одном экране */
+  overflow: hidden;
 }
-
-.gallery img {
+.gallery .img {
   position: absolute;
   object-fit: cover;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0,0,0,.15);
 }
 
-/* 📌 Расположение картинок по твоему скрину */
-.img1 { top: 40px; left: 40px; width: 280px; }
-.img2 { top: 60px; left: 360px; width: 220px; }
-.img3 { top: 90px; left: 620px; width: 300px; }
-.img4 { top: 320px; left: 60px; width: 250px; }
-.img5 { top: 350px; left: 340px; width: 200px; }
-.img6 { top: 360px; left: 580px; width: 260px; }
-.img7 { top: 600px; left: 60px; width: 280px; }
-.img8 { top: 620px; left: 380px; width: 240px; }
-.img9 { top: 640px; left: 680px; width: 220px; }
-.img10 { top: 900px; left: 40px; width: 300px; }
-.img11 { top: 920px; left: 380px; width: 260px; }
-.img12 { top: 940px; left: 700px; width: 220px; }
-.img13 { top: 1180px; left: 60px; width: 280px; }
-.img14 { top: 1200px; left: 380px; width: 240px; }
-.img15 { top: 1220px; left: 680px; width: 220px; }
-.img16 { top: 1460px; left: 40px; width: 300px; }
-.img17 { top: 1480px; left: 380px; width: 260px; }
-.img18 { top: 1500px; left: 700px; width: 220px; }
-.img19 { top: 1740px; left: 60px; width: 280px; }
-.img20 { top: 1760px; left: 380px; width: 240px; }
+/* координаты под макет (подгони при желании) */
+.img1  { top:  10px; left:  20px; width: 720px; height: 720px; z-index: 1; } /* большой фон */
+.img2  { top: 110px; left: 180px; width: 300px; height: 420px; z-index: 3; }
+.img3  { top: 140px; left: 520px; width: 280px; height: 380px; z-index: 4; }
+.img4  { top: 160px; left: 860px; width: 260px; height: 340px; z-index: 5; }
+.img5  { top: 130px; left: 1140px; width: 260px; height: 360px; z-index: 4; }
+.img6  { top: 260px; left:  60px; width: 360px; height: 360px; z-index: 2; }
+.img7  { top: 300px; left: 430px; width: 220px; height: 300px; z-index: 6; }
+.img8  { top: 320px; left: 700px; width: 240px; height: 320px; z-index: 6; }
+.img9  { top: 340px; left: 980px; width: 260px; height: 170px; z-index: 6; }
+.img10 { top: 520px; left:  80px; width: 300px; height: 420px; z-index: 4; }
+.img11 { top: 540px; left: 400px; width: 260px; height: 260px; z-index: 7; }
+.img12 { top: 560px; left: 690px; width: 260px; height: 260px; z-index: 7; }
+.img13 { top: 560px; left: 980px; width: 260px; height: 200px; z-index: 7; }
+.img14 { top: 740px; left: 400px; width: 260px; height: 340px; z-index: 7; }
+.img15 { top: 760px; left: 690px; width: 260px; height: 340px; z-index: 7; }
+.img16 { top: 760px; left: 980px; width: 260px; height: 340px; z-index: 7; }
+.img17 { top: 880px; left: 1210px; width: 220px; height: 150px; z-index: 7; }
+.img18 { top: 860px; left:  116px; width: 260px; height: 180px; z-index: 8; }
+.img19 { top: 930px; left: 1160px; width: 260px; height: 360px; z-index: 8; }
+.img20 { top: 980px; left:  760px; width: 260px; height: 340px; z-index: 8; }
 
-/* About page */
+/* about */
 .about {
   display: flex;
-  align-items: flex-start;
-  padding: 40px;
+  gap: 40px;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-
-.about-image img {
-  max-width: 400px;
-  height: auto;
-  display: block;
-}
-
-.about-text {
-  margin-left: 40px;
-  max-width: 600px;
-  font-size: 14px;
-  line-height: 1.6;
-}
+.about-image img { width: 420px; height: auto; display: block; }
+.about-text { flex: 1; line-height: 1.6; font-size: 15px; }
+.about h3 { margin: 20px 0 8px; font-weight: 400; }
