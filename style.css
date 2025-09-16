@@ -4,7 +4,7 @@ html, body { height: 100%; }
 body {
   margin: 0;
   font-family: 'Playfair Display', serif;
-  color: #A0522D;
+  color: #000;
   background: none;          /* никаких подложек */
 }
 
@@ -25,6 +25,7 @@ body {
   top: 14px;
   line-height: 1.35;
   font-size: 14px;
+  color: #A0522D;   /* цвет текста */
 }
 
 /* Home — строго по центру независимо от ширины блоков слева/справа */
