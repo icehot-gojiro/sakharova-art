@@ -4,6 +4,7 @@ body {
   background: none;
 }
 
+/* Хедер */
 header {
   position: fixed;
   top: 0;
@@ -11,7 +12,7 @@ header {
   width: 100%;
   padding: 20px 40px;
   display: grid;
-  grid-template-columns: 1fr auto 1fr; /* три колонки */
+  grid-template-columns: 1fr auto 1fr; /* слева, центр, справа */
   align-items: center;
   background: none;
   z-index: 1000;
@@ -23,8 +24,9 @@ header .contacts {
   font-size: 14px;
 }
 
-header nav {
+header .center-nav {
   justify-self: center;
+  text-align: center;
 }
 
 header .about {
@@ -47,15 +49,12 @@ header a:active {
   color: gray;
 }
 
-main {
-  padding-top: 100px;
-}
-
 /* Главная */
 .hero img {
   width: 100%;
   height: 100vh;
   object-fit: cover;
+  display: block;
 }
 
 /* About */
@@ -64,7 +63,7 @@ main {
   align-items: flex-start;
   justify-content: flex-start;
   gap: 40px;
-  padding: 120px 40px 40px 40px;
+  padding: 140px 40px 40px 40px;
 }
 
 .about-image img {
@@ -77,4 +76,9 @@ main {
   max-width: 700px;
   font-size: 16px;
   line-height: 1.6;
+}
+
+.about-text h3 {
+  margin-top: 24px;
+  font-size: 20px;
 }
