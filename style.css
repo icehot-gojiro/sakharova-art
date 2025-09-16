@@ -14,23 +14,34 @@ a:hover, a:active { color: #000; text-decoration: underline; }
 
 /* хедер */
 header {
-  position: fixed;          /* меню всегда видно */
+  position: fixed;
   top: 0; left: 0; right: 0;
-  padding: 16px 20px;
+  padding: 16px 40px; /* чуть больше паддинга, чтобы About не лип к краю */
   z-index: 10;
-  background: transparent;  /* без полосы; если нужна белая — поставь #fff */
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+/* контакты слева */
 .contacts {
   position: absolute;
-  left: 20px; top: 16px;
+  left: 40px;
+  top: 16px;
   line-height: 1.4;
   text-align: left;
 }
 
-/* центруем Home, About вправо */
-.nav-link.home  { position: absolute; left: 50%; transform: translateX(-50%); top: 16px; }
-.nav-link.about { position: absolute; right: 20px; top: 16px; }
+/* Home в центре, About справа */
+.nav-link.home {
+  margin: 0 auto;
+}
+.nav-link.about {
+  position: absolute;
+  right: 40px;
+  top: 16px;
+}
 
 /* hero — одна картинка на весь экран */
 .hero {
