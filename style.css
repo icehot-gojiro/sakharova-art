@@ -1,72 +1,92 @@
-body {
-  margin: 0;
-  font-family: 'Playfair Display', serif;
-  background: #fff;
-  color: #000;
+/* базовое */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;background:#fff;color:#000;
+  font-family:'Playfair Display',serif;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 20px;
-  position: relative;
+/* шапка */
+header{position:relative;padding:20px 24px 10px}
+.contacts{line-height:1.4}
+header a{color:#000;text-decoration:none}
+header a:hover,header a:active{color:#000;text-decoration:underline}
+
+/* центрируем Home, About вправо */
+nav{position:absolute;top:20px;left:50%;transform:translateX(-50%);white-space:nowrap}
+nav .about{position:absolute;right:-48vw;transform:none} /* уводим About вправо от центра */
+nav .home{position:relative;padding:0 12px}
+
+/* сцена */
+.stage{
+  position:relative;
+  width:100%;
+  height:100vh;           /* один экран без скролла */
+  overflow:hidden;
 }
 
-.contacts {
-  text-align: left;
+/* общие правила картинок */
+.stage .i{
+  position:absolute;
+  height:auto;
+  object-fit:contain;     /* НИЧЕГО не режем */
+  filter: drop-shadow(0 8px 18px rgba(0,0,0,.12));
 }
 
-header nav {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+/* ===== Точное расположение под твой эталон (экран ~1600×900) ===== */
+/* большие размеры в vw/vh, чтобы держать композицию */
+.i1{ /* мягкий светлый бэк */
+  top:5vh; left:1.5vw; width:55vw; z-index:1; opacity:.95;
+}
+.i2{ /* круглый светлый диск */
+  top:18vh; left:14vw; width:22vw; z-index:5;
+}
+.i3{ /* большой тёмный круг */
+  top:16vh; left:36vw; width:23vw; z-index:4;
+}
+.i4{ /* светлый овал с перьями */
+  top:38vh; left:31vw; width:16vw; z-index:6;
+}
+.i5{ /* графитные портреты справа от овалов */
+  top:14vh; left:58vw; width:17vw; z-index:5;
+}
+.i6{ /* бирюзовый абстракт справа */
+  top:14vh; left:75vw; width:18vw; z-index:5;
+}
+.i7{ /* корова монохром по центру снизу-правее */
+  top:44vh; left:54vw; width:17vw; z-index:7;
+}
+.i8{ /* космос ч/б с золотыми – справа от коровы */
+  top:45vh; left:69vw; width:16vw; z-index:7;
+}
+.i9{ /* длинный оранжевый снизу справа (верхний край виден) */
+  bottom:-4vh; right:6vw; width:18vw; z-index:6;
+}
+.i10{ /* большой граффити фрагмент слева снизу */
+  bottom:-6vh; left:3vw; width:25vw; z-index:2;
+}
+.i11{ /* витрина/растения – низ слева-центра */
+  bottom:-2vh; left:28vw; width:18vw; z-index:6;
+}
+.i12{ /* витрина/растения панорама – по центру снизу */
+  bottom:-6vh; left:48vw; width:18vw; z-index:6;
+}
+.i13{ /* квадрат/малый блок под портретами */
+  top:33vh; left:58vw; width:9vw; z-index:6;
+}
+.i14{ /* маленький кирпич справа внизу под абстрактом */
+  bottom:7vh; right:11vw; width:10vw; z-index:7;
 }
 
-header nav a {
-  margin-left: 30px;
-  text-decoration: none;
-  color: #000;
+/* ===== медиаправки ===== */
+@media (max-width:1440px){
+  .i1{left:2vw; width:58vw}
+  .i2{left:15vw; width:23vw}
+  .i3{left:37vw; width:24vw}
+  .i6{left:76vw; width:19vw}
+  nav .about{right:-50vw}
 }
-
-header nav a:hover,
-header nav a:active {
-  text-decoration: underline;
-  color: #000;
+@media (max-width:1280px){
+  .stage{transform:scale(.92); transform-origin:50% 0}
+  nav .about{right:-52vw}
 }
-
-.gallery {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-}
-
-.gallery img {
-  position: absolute;
-  object-fit: contain;
-  max-width: 300px;
-  height: auto;
-}
-
-/* Статичное позиционирование картинок — можно корректировать */
-.img1 { top: 50px; left: 50px; width: 250px; }
-.img2 { top: 100px; left: 350px; width: 220px; }
-.img3 { top: 200px; left: 600px; width: 260px; }
-.img4 { top: 400px; left: 100px; width: 300px; }
-.img5 { top: 450px; left: 450px; width: 240px; }
-.img6 { top: 50px; left: 900px; width: 260px; }
-.img7 { top: 350px; left: 750px; width: 220px; }
-.img8 { top: 200px; left: 1100px; width: 280px; }
-.img9 { top: 500px; left: 650px; width: 230px; }
-.img10 { top: 600px; left: 1000px; width: 250px; }
-.img11 { top: 700px; left: 200px; width: 270px; }
-.img12 { top: 800px; left: 500px; width: 240px; }
-.img13 { top: 900px; left: 800px; width: 300px; }
-.img14 { top: 150px; left: 1400px; width: 280px; }
-.img15 { top: 600px; left: 1300px; width: 250px; }
-.img16 { top: 950px; left: 200px; width: 260px; }
-.img17 { top: 1100px; left: 600px; width: 270px; }
-.img18 { top: 1200px; left: 950px; width: 280px; }
-.img19 { top: 1300px; left: 400px; width: 260px; }
-.img20 { top: 1400px; left: 800px; width: 300px; }
