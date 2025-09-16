@@ -11,26 +11,30 @@ header {
   left: 0;
   width: 100%;
   padding: 20px 40px;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr; /* слева, центр, справа */
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  background: none;
   z-index: 1000;
+  background: none; /* ← убираем любые подложки */
 }
 
+/* Контакты */
 header .contacts {
-  justify-self: start;
+  flex: 1;
   text-align: left;
   font-size: 14px;
 }
 
+/* Центр */
 header .center-nav {
-  justify-self: center;
+  flex: 1;
   text-align: center;
 }
 
+/* About */
 header .about {
-  justify-self: end;
+  flex: 1;
+  text-align: right;
 }
 
 header a {
