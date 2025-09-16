@@ -1,74 +1,93 @@
+/* База */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
 body {
   margin: 0;
-  background: #fff;
   font-family: 'Playfair Display', serif;
-  font-weight: 400;
   color: #000;
+  background: none;          /* никаких подложек */
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 20px;
+/* Фиксированный HEADER без флексов/гридов — абсолютные точки
+   чтобы Home БЫЛ ВСЕГДА СТРОГО ПО ЦЕНТРУ */
+.hdr {
+  position: fixed;
+  inset: 0 0 auto 0;         /* top:0; left:0; right:0 */
+  height: 72px;              /* визуальная высота */
+  z-index: 1000;
+  background: none;          /* никаких фонов */
+}
+
+/* Контакты слева */
+.hdr .contacts {
+  position: absolute;
+  left: 40px;
+  top: 14px;
+  line-height: 1.35;
   font-size: 14px;
 }
 
-header a {
+/* Home — строго по центру независимо от ширины блоков слева/справа */
+.hdr .home-link {
+  position: absolute;
+  left: 50%;
+  top: 18px;
+  transform: translateX(-50%);
+  font-size: 16px;
   text-decoration: none;
   color: #000;
 }
 
-header a:hover {
-  text-decoration: underline;
+/* About — прижат к правому краю */
+.hdr .about-link {
+  position: absolute;
+  right: 40px;
+  top: 18px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #000;
 }
 
-header a:active {
-  color: gray;
+/* Hover / Active — только подчёркивание и серый active */
+.hdr a:hover { text-decoration: underline; color: #000; }
+.hdr a:active { color: #777; }
+
+/* Главная — одна картинка на весь экран */
+.hero {
+  min-height: 100vh;
+}
+.hero img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  display: block;
 }
 
-header .name {
+/* ABOUT — фото слева, текст справа */
+.about-page {
+  display: flex;
+  gap: 40px;
+  padding: 120px 40px 40px; /* отступ сверху, чтобы не упереться в хедер */
+  align-items: flex-start;
+}
+
+.about-image img {
+  display: block;
+  width: 420px;     /* крупнее, без скруглений */
+  height: auto;
+}
+
+.about-text {
+  max-width: 720px;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.about-text h3 {
+  margin: 24px 0 8px;
   font-size: 20px;
 }
 
-header .contact {
-  margin-top: 6px;
-}
-
-.gallery {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.gallery .item {
-  position: absolute;
-}
-
-.gallery img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  box-shadow: 0 6px 18px rgba(0,0,0,.12);
-}
-
-.about {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 40px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.about .photo img {
-  max-width: 400px;
-  margin-right: 40px;
-}
-
-.about .bio {
-  flex: 1;
-  text-align: left;
-  white-space: pre-wrap;
-}
+/* Ссылки в тексте */
+a { color: #000; text-decoration: none; }
+a:hover { text-decoration: underline; }
