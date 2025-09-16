@@ -1,74 +1,41 @@
-body {
-  margin: 0;
-  background: #fff;
-  font-family: 'Playfair Display', serif;
-  font-weight: 400;
-  color: #000;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+/* Общие стили остаются */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: 100px;
+  gap: 10px;
   padding: 20px;
-  font-size: 14px;
 }
 
-header a {
-  text-decoration: none;
-  color: #000;
-}
-
-header a:hover {
-  text-decoration: underline;
-}
-
-header a:active {
-  color: gray;
-}
-
-header .name {
-  font-size: 20px;
-}
-
-header .contact {
-  margin-top: 6px;
-}
-
-.gallery {
-  position: relative;
+.gallery-grid img {
   width: 100%;
-  height: 100vh;
-  overflow: hidden;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-.gallery .item {
-  position: absolute;
-}
+/* Пример статичных позиций (надо будет подогнать под твой макет) */
+.item1 { grid-column: 1 / span 3; grid-row: 1 / span 4; }
+.item2 { grid-column: 4 / span 2; grid-row: 1 / span 2; }
+.item3 { grid-column: 6 / span 4; grid-row: 1 / span 3; }
+.item4 { grid-column: 10 / span 3; grid-row: 1 / span 4; }
 
-.gallery img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  box-shadow: 0 6px 18px rgba(0,0,0,.12);
-}
+.item5 { grid-column: 2 / span 3; grid-row: 5 / span 3; }
+.item6 { grid-column: 5 / span 2; grid-row: 4 / span 2; }
+.item7 { grid-column: 7 / span 3; grid-row: 5 / span 3; }
+.item8 { grid-column: 10 / span 2; grid-row: 5 / span 2; }
 
-.about {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  padding: 40px;
-  max-width: 1200px;
-  margin: auto;
-}
+.item9 { grid-column: 1 / span 2; grid-row: 8 / span 3; }
+.item10 { grid-column: 3 / span 4; grid-row: 7 / span 4; }
+.item11 { grid-column: 7 / span 2; grid-row: 8 / span 2; }
+.item12 { grid-column: 9 / span 3; grid-row: 7 / span 4; }
 
-.about .photo img {
-  max-width: 400px;
-  margin-right: 40px;
-}
+.item13 { grid-column: 2 / span 2; grid-row: 11 / span 2; }
+.item14 { grid-column: 4 / span 3; grid-row: 11 / span 3; }
+.item15 { grid-column: 7 / span 4; grid-row: 10 / span 3; }
+.item16 { grid-column: 1 / span 2; grid-row: 13 / span 2; }
 
-.about .bio {
-  flex: 1;
-  text-align: left;
-  white-space: pre-wrap;
-}
+.item17 { grid-column: 3 / span 3; grid-row: 14 / span 2; }
+.item18 { grid-column: 6 / span 2; grid-row: 13 / span 2; }
+.item19 { grid-column: 8 / span 3; grid-row: 13 / span 3; }
+.item20 { grid-column: 11 / span 2; grid-row: 12 / span 2; }
