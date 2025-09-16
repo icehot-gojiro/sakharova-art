@@ -35,7 +35,7 @@ body {
   transform: translateX(-50%);
   font-size: 16px;
   text-decoration: none;
-  color: #000;
+  color: #A0522D;   /* коричнево-красный */
 }
 
 /* About — прижат к правому краю */
@@ -45,12 +45,12 @@ body {
   top: 18px;
   font-size: 16px;
   text-decoration: none;
-  color: #000;
+  color: #A0522D;   /* коричнево-красный */
 }
 
-/* Hover / Active — только подчёркивание и серый active */
-.hdr a:hover { text-decoration: underline; color: #000; }
-.hdr a:active { color: #777; }
+/* Hover / Active — подчёркивание и оттенки */
+.hdr a:hover { text-decoration: underline; color: #8B3E2F; }
+.hdr a:active { color: #5C2A1D; }
 
 /* Главная — одна картинка на весь экран */
 .hero {
