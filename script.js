@@ -1,11 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const images = document.querySelectorAll(".gallery img");
-  images.forEach(img => {
-    const colStart = Math.floor(Math.random() * 10) + 1;
-    const colSpan = Math.floor(Math.random() * 3) + 2;
-    const rowStart = Math.floor(Math.random() * 5) + 1;
-    const rowSpan = Math.floor(Math.random() * 2) + 2;
-    img.style.gridColumn = `${colStart} / span ${colSpan}`;
-    img.style.gridRow = `${rowStart} / span ${rowSpan}`;
+  const items = document.querySelectorAll(".gallery .item");
+  items.forEach(item => {
+    const img = item.querySelector("img");
+    const size = 150 + Math.random() * 200; // размер от 150 до 350px
+    item.style.width = size + "px";
+    item.style.top = Math.random() * 80 + "%";
+    item.style.left = Math.random() * 80 + "%";
   });
 });
