@@ -5,30 +5,35 @@ body {
   margin: 0;
   font-family: 'Playfair Display', serif;
   color: #000;
-  background: none;          /* никаких подложек */
+  background: none;
 }
 
-/* Фиксированный HEADER без флексов/гридов — абсолютные точки
-   чтобы Home БЫЛ ВСЕГДА СТРОГО ПО ЦЕНТРУ */
+/* HEADER */
 .hdr {
   position: fixed;
-  inset: 0 0 auto 0;         /* top:0; left:0; right:0 */
-  height: 72px;              /* визуальная высота */
+  inset: 0 0 auto 0;
+  height: 72px;
   z-index: 1000;
-  background: none;          /* никаких фонов */
+  background: none;
 }
 
-/* Контакты слева */
 .hdr .contacts {
   position: absolute;
   left: 40px;
   top: 14px;
   line-height: 1.35;
   font-size: 14px;
-  color: #A0522D;   /* цвет текста */
+  color: #A0522D;
+}
+.hdr .contacts a {
+  color: #A0522D;
+  text-decoration: none;
+}
+.hdr .contacts a:hover {
+  text-decoration: underline;
 }
 
-/* Home — строго по центру независимо от ширины блоков слева/справа */
+/* Центровка меню */
 .hdr .home-link {
   position: absolute;
   left: 50%;
@@ -36,24 +41,23 @@ body {
   transform: translateX(-50%);
   font-size: 16px;
   text-decoration: none;
-  color: #A0522D;   /* коричнево-красный */
+  color: #A0522D;
 }
 
-/* About — прижат к правому краю */
 .hdr .about-link {
   position: absolute;
   right: 40px;
   top: 18px;
   font-size: 16px;
   text-decoration: none;
-  color: #A0522D;   /* коричнево-красный */
+  color: #A0522D;
 }
 
-/* Hover / Active — подчёркивание и оттенки */
-.hdr a:hover { text-decoration: underline; color: #8B3E2F; }
-.hdr a:active { color: #5C2A1D; }
+/* Hover */
+.hdr a:hover { text-decoration: underline; color: #A0522D; }
+.hdr a:active { color: #8B0000; }
 
-/* Главная — одна картинка на весь экран */
+/* Hero */
 .hero {
   min-height: 100vh;
 }
@@ -64,17 +68,17 @@ body {
   display: block;
 }
 
-/* ABOUT — фото слева, текст справа */
+/* ABOUT */
 .about-page {
   display: flex;
   gap: 40px;
-  padding: 120px 40px 40px; /* отступ сверху, чтобы не упереться в хедер */
+  padding: 120px 40px 40px;
   align-items: flex-start;
 }
 
 .about-image img {
   display: block;
-  width: 420px;     /* крупнее, без скруглений */
+  width: 420px;
   height: auto;
 }
 
@@ -87,8 +91,12 @@ body {
 .about-text h3 {
   margin: 24px 0 8px;
   font-size: 20px;
+  color: #A0522D;
 }
 
-/* Ссылки в тексте */
-a { color: #000; text-decoration: none; }
-a:hover { text-decoration: underline; }
+.about-logo img {
+  display: block;
+  width: 160px;
+  height: auto;
+  margin-top: 40px;
+}
